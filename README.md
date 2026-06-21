@@ -52,16 +52,17 @@ pip install -r requirements.txt
 ```
 **3. Configure Node-RED Dashboard**
 Before starting the sensor script, you need to set up the visualization interface:
-*Start Node-RED on your Raspberry Pi.
-*Open a browser and go to `http://<Your_Raspberry_Pi_IP_Address>:1880`.
-*Click the menu icon `(≡)` in the top right corner and select Import.
-*Upload the `flows.json` file included in this repository.
-*Click the red `Deploy` button in the top right corner to activate the MQTT listener and dashboard logic.
+* Start Node-RED on your Raspberry Pi.
+* Open a browser and go to `http://<Your_Raspberry_Pi_IP_Address>:1880`.
+* Click the menu icon `(≡)` in the top right corner and select Import.
+* Upload the `flows.json` file included in this repository.
+* Click the red `Deploy` button in the top right corner to activate the MQTT listener and dashboard logic.
+
 **4. Run the Monitoring Script**
 Execute the Python script. The system will automatically create the `lab.db` database and start publishing data to the MQTT Broker every 5 seconds:
 
 ```bash
 python3 system.py
 ```
-5. Access the Dashboard
+**5. Access the Dashboard**
 Open a web browser on any device within the same local network and navigate to the UI page to view real-time data:`http://<Your_Raspberry_Pi_IP_Address>:1880/ui`
